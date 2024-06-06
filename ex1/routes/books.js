@@ -21,7 +21,7 @@ router.get('/', function (req, res) {
     var selectors = {};
 
     if (req.query.charater)
-        selectors.characters = req.query.charater;
+        selectors.characters = { $regex: req.query.charater };
 
     if (req.query.genre)
         selectors.genres = req.query.genre;
@@ -58,13 +58,13 @@ router.delete('/:id', function (req, res) {
 });
 
 router.get('/genres', function (req, res) {
-    Livro.distinct('genres').then(function (genres) {
+    Livro.distinct('genres').sort().then(function (genres) {
         res.send(genres);
     }).catch(err => { res.status(500).send(err) });
 });
 
 router.get('/characters', function (req, res) {
-    Livro.distinct('characters').then(function (characters) {
+    Livro.distinct('characters').sort().then(function (characters) {
         res.send(characters);
     }).catch(err => { res.status(500).send(err) });
 });
