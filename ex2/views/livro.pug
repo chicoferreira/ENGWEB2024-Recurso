@@ -4,7 +4,8 @@ block content
   p Voltar para a 
     a(href="/") página inicial
   h1.w3-center Livro #{livro.title}
-  img(src=livro.coverImg, alt="Imagem do livro")
+  if livro.coverImg
+    img.w3-image(src=livro.coverImg, alt=livro.title)
   ul.w3-ul
         li Identificador: #{livro._id}
         li Título: #{livro.title}

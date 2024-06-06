@@ -8,7 +8,7 @@ Passos que foram feitos para persistir os dados:
     - Lista de avaliações por estrelas
     - Lista de cenários
     - Autores foram separados por vírgula e colocados numa array
-- Trocado nome de "bookId" para "_id"
+- Trocado nome de "bookId" para "_id" manualmente (com control + f).
 
 O resultado pode ser visto no arquivo `dataset.json` que foi o que foi usado para inserir os dados no MongoDB.
 
