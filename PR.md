@@ -28,6 +28,12 @@ mongo-seed-1  | 2024-06-06T13:29:02.933+0000    20000 document(s) imported succe
 
 Foi usado como id o campo `_id` (que foi o campo `bookId` renomeado) para o request `GET /books/:id`.
 
+# Detalhes de implementação
+
+# Exercício 2
+
+Como alguns ids são muito grandes, e que acabam por ocupar muito espaço da tabela, o id mostrado na tabela é truncado para 50 caracteres.
+
 # Instruções de execução
 
 # Ações necessárias
