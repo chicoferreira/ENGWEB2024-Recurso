@@ -1,7 +1,10 @@
 extends layout
 
 block content
-  p Livros disponíveis: #{livros.length}
+  p Voltar para a 
+    a(href="/") página inicial
+  h3 Autor (Identificador): '#{author}'
+  p Número de livros publicados: #{livros.length}
   table.w3-table
     thead
         tr

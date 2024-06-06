@@ -1,0 +1,69 @@
+extends layout
+
+block content
+  p Voltar para a 
+    a(href="/") página inicial
+  h1.w3-center Livro #{livro.title}
+  img(src=livro.coverImg, alt="Imagem do livro")
+  ul.w3-ul
+        li Identificador: #{livro._id}
+        li Título: #{livro.title}
+        li Séries: #{livro.series}
+        li Autores: 
+            if livro.author && Array.isArray(livro.author)
+                ul.w3-ul
+                    each author in livro.author
+                        li
+                            a(href="/authors/" + author)= author
+            else
+                li N/A
+        li Rating: #{livro.rating}
+        li Descrição: #{livro.description}
+        li Língua: #{livro.language}
+        li ISBN: #{livro.isbn}
+        li Géneros: 
+            if livro.genres && Array.isArray(livro.genres)
+                ul.w3-ul
+                    each genre in livro.genres
+                        li= genre
+            else
+                li N/A
+        li Personagens: 
+            if livro.characters && Array.isArray(livro.characters)
+                ul.w3-ul
+                    each character in livro.characters
+                        li= character
+            else
+                li N/A
+        li Formato: #{livro.bookFormat}
+        li Edição: #{livro.edition}
+        li Páginas: #{livro.pages}
+        li Editora: #{livro.publisher}
+        li Data de Publicação: #{livro.publishDate}
+        li Data de Criação: #{livro.firstPublishDate}
+        li Prémios: 
+            if livro.awards && Array.isArray(livro.awards)
+                ul.w3-ul
+                    each award in livro.awards
+                        li= award
+            else
+                li N/A
+        li Número de Avaliações: #{livro.numRatings}
+        li Rating por Estrelas: 
+            if livro.ratingsByStars && Array.isArray(livro.ratingsByStars)
+                ul.w3-ul
+                    each rating in livro.ratingsByStars
+                        li= rating
+            else
+                li N/A
+        li Percentagem de Gostos: #{livro.likedPercent}
+        li Locais:
+            if livro.setting && Array.isArray(livro.setting)
+                ul.w3-ul
+                    each s in livro.setting
+                        li= s
+            else
+                li N/A
+        li Score BBE: #{livro.bbeScore}
+        li Votos BBE: #{livro.bbeVotes}
+        li Preço: #{livro.price}
