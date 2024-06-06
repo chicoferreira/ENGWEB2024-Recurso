@@ -9,4 +9,4 @@ services:
     image: mongo:latest
     volumes:
       - ./dataset.json:/dataset.json
-    command: mongoimport --host mongodb -d <DATABASE> -c <COLLECTION> --type json --file dataset.json --jsonArray
+    command: mongoimport --host mongodb -d livros -c livros --type json --file dataset.json --jsonArray
