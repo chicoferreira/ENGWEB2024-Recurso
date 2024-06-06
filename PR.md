@@ -34,6 +34,16 @@ Foi usado como id o campo `_id` (que foi o campo `bookId` renomeado) para o requ
 
 Como alguns ids são muito grandes, e que acabam por ocupar muito espaço da tabela, o id mostrado na tabela é truncado para 50 caracteres.
 
+O identificador de autores foi escolhido como o nome do autor.
+
 # Instruções de execução
 
+O projeto está containerizado, então para executar basta rodar o comando:
+
+```
+docker compose up --build
+``` 
+
 # Ações necessárias
+
+Nenhuma ação extra necessária, o dataset já está pronto no `dataset.json` e é importado automaticamente para a base de dados.
