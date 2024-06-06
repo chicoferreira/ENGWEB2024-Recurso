@@ -24,6 +24,10 @@ mongo-seed-1  | 2024-06-06T13:29:02.933+0000    20000 document(s) imported succe
 
 # Respostas textuais
 
+## Exercício 1
+
+Foi usado como id o campo `_id` (que foi o campo `bookId` renomeado) para o request `GET /books/:id`.
+
 # Instruções de execução
 
 # Ações necessárias
