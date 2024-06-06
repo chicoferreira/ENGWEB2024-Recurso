@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var axios = require('axios');
 
-const apiDados = "http://localhost:17000";
+const apiDados = "http://backend:17000";
 
 /* GET home page. */
 router.get('/', function (req, res) {
