@@ -38,7 +38,7 @@ O identificador de autores foi escolhido como o nome do autor.
 
 # Instruções de execução
 
-O projeto está containerizado, então para executar basta rodar o comando:
+O projeto está containerizado, então para executar basta rodar o comando para rodar db, api dados e frontend:
 
 ```
 docker compose up --build
