@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "5018456b-8b43-4ab4-af81-0673e857af44",
+		"name": "EW RECURSO 2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33062052"
+	},
+	"item": [
+		{
+			"name": "GET /books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:17000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /books/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:17000/books/2767052-the-hunger-games",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books",
+						"2767052-the-hunger-games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /books?charater=EEEE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:17000/books?charater=Abe Ryland",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "charater",
+							"value": "Abe Ryland"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /books?genre=AAA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:17000/books?genre=Portugal",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Portugal"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /books/genres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:17000/books/genres",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /books/characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:17000/books/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"meu_livro_top\",\n    \"title\": \"Como passar a EW\",\n    \"series\": \"UMinho\",\n    \"author\": [\n      \"Mafioso da Mafia\"\n    ],\n    \"rating\": \"5\",\n    \"description\": \"Nada a dizer\",\n    \"language\": \"Portugues\",\n    \"isbn\": \"Não publicado\",\n    \"genres\": [\"Todos\"],\n    \"characters\": [\"Alunos da UM\"],\n    \"bookFormat\": \"Hardcover\",\n    \"edition\": \"First Edition\",\n    \"pages\": \"10\",\n    \"publisher\": \"Scholastic Press\",\n    \"publishDate\": \"09/14/08\",\n    \"firstPublishDate\": \"\",\n    \"awards\": [],\n    \"numRatings\": \"6376780\",\n    \"ratingsByStars\": [],\n    \"likedPercent\": \"96\",\n    \"setting\": [],\n    \"coverImg\": \"\",\n    \"bbeScore\": \"2993816\",\n    \"bbeVotes\": \"30516\",\n    \"price\": \"0.00\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:17000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /books Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"meu_livro_top\",\n    \"title\": \"Como passar a EW\",\n    \"series\": \"UMinho\",\n    \"author\": [\n      \"Mafioso da Mafia\"\n    ],\n    \"rating\": \"5\",\n    \"description\": \"Nada a dizer\",\n    \"language\": \"Portugues\",\n    \"isbn\": \"Não publicado\",\n    \"genres\": [\"Todos\"],\n    \"characters\": [\"Alunos da UM\"],\n    \"bookFormat\": \"Hardcover\",\n    \"edition\": \"First Edition\",\n    \"pages\": \"10\",\n    \"publisher\": \"Scholastic Press\",\n    \"publishDate\": \"09/14/08\",\n    \"firstPublishDate\": \"\",\n    \"awards\": [],\n    \"numRatings\": \"6376780\",\n    \"ratingsByStars\": [],\n    \"likedPercent\": \"96\",\n    \"setting\": [],\n    \"coverImg\": \"\",\n    \"bbeScore\": \"2993816\",\n    \"bbeVotes\": \"30516\",\n    \"price\": \"0.00\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:17000/books/meu_livro_top",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books",
+						"meu_livro_top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /books/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": \"10000.00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:17000/books/meu_livro_top",
+					"host": [
+						"localhost"
+					],
+					"port": "17000",
+					"path": [
+						"books",
+						"meu_livro_top"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
