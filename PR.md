@@ -1,20 +1,20 @@
 # Persistência de dados
 
 Passos que foram feitos para persistir os dados:
-- Execução do script `convert-dataset.py` que converte arrays em string para arrays em JSON.
+- Execução do script `convert-dataset.py` que converte arrays em string para arrays em JSON. Foi aplicado em:
     - Lista de gêneros
     - Lista de personagens
     - Lista de prêmios
     - Lista de avaliações por estrelas
     - Lista de cenários
-    - Autores foram separados por vírgula e colocados numa array
+- Autores foram separados por vírgula e colocados num array
 - Trocado nome de "bookId" para "_id" manualmente (com control + f).
 
 O resultado pode ser visto no arquivo `dataset.json` que foi o que foi usado para inserir os dados no MongoDB.
 
 # Setup de bases de dados
 
-Existe o container `mongo-seed` que faz a importação de dados para o container da base de dados. Este container coloca o arquivo `dataset.json` para dentro do container e executa o comando `mongoimport` para importar os dados para a base de dados.
+Existe o container `mongo-seed` que faz a importação de dados para o container da base de dados. Este container coloca o arquivo `dataset.json` para dentro do container e executa o comando `mongoimport` para importar os dados para a base de dados. Ver o arquivo `docker-compose.yml` para mais detalhes.
 
 ## Resultado
 
@@ -28,6 +28,8 @@ mongo-seed-1  | 2024-06-06T13:29:02.933+0000    20000 document(s) imported succe
 
 Foi usado como id o campo `_id` (que foi o campo `bookId` renomeado) para o request `GET /books/:id`.
 
+Os testes à API foram feitos com o Postman e podem ser encontrados em: `ex1/EW RECURSO 2024.postman_collection.json`.
+
 # Detalhes de implementação
 
 # Exercício 2
@@ -38,7 +40,7 @@ O identificador de autores foi escolhido como o nome do autor.
 
 # Instruções de execução
 
-O projeto está containerizado, então para executar basta rodar o comando para rodar db, api dados e frontend:
+O projeto está containerizado, então para executar basta rodar o comando para iniciar db, api dados e frontend:
 
 ```
 docker compose up --build
